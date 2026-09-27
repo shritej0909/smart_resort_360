@@ -2891,6 +2891,6 @@ app.use((err, req, res, _next) => {
   res.status(err.status === 400 ? 400 : 500).json({ error: err.status === 400 ? 'Invalid request.' : 'Something went wrong. Please try again.' });
 });
 
-app.listen(Number(process.env.PORT || 5000), '127.0.0.1', () =>
-  console.log(`Smart Resort 360 ready → http://localhost:${process.env.PORT || 5000}`)
+app.listen(Number(process.env.PORT || 5000), '0.0.0.0', () =>
+  console.log(`Smart Resort 360 ready → port ${process.env.PORT || 5000}`)
 );
